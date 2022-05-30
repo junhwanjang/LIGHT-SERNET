@@ -11,7 +11,7 @@ import hyperparameters
 #os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
 
 
-def seperate_iemocap_class(dataset_folder_path, target_classes=['angry', 'neutral', 'sadness'], merge_classes=['happiness', 'excited']):
+def seperate_iemocap_class(dataset_folder_path, target_classes=['angry', 'disgust', 'fear', 'frustration','neutral', 'sadness'], merge_classes=['happiness', 'excited']):
 
     new_folder_name = "_".join(merge_classes)
     new_folder_path = f"{dataset_folder_path}/{new_folder_name}"

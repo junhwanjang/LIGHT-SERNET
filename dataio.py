@@ -135,7 +135,7 @@ def split_dataset(dataset_name, audio_type="all"):
         labels_list = np.array(tf.io.gfile.listdir(str(dataset_name)))
         if len(labels_list) != 4:
             seperate_iemocap_class(dataset_name,
-                                   target_classes=['angry', 'neutral', 'sadness'],
+                                   target_classes=['angry', 'fear', 'neutral', 'sadness', 'surprise'],
                                    merge_classes=['happiness', 'excited'])
                 
     

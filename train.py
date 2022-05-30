@@ -99,6 +99,7 @@ buff = Segmented_datasetname_format.format(dataset_name, input_durations)
 buff = f"{hyperparameters.BASE_DIRECTORY}/{buff}"
 if not os.path.exists(buff):
     os.system(f"python utils/segment/segment_dataset.py -dp data/{dataset_name} -ip utils/DATASET_INFO.json -d {dataset_name} -l {input_durations} -m 1")
+    # os.system(f"python utils/segment/segment_dataset.py -dp /content/drive/MyDrive/Dataset/SER/{dataset_name} -ip utils/DATASET_INFO.json -d {dataset_name} -l {input_durations} -m 1")
 dataset_name = Segmented_datasetname_format.format(dataset_name, input_durations)
 print(".................................. Segment Dataset finished ......................................")
 
